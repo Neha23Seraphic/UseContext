@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { createContext } from 'react';
+import FirstCom from "./FirstCom";
 
-export default function App() {
+
+
+const App = () => {
+  const FirstName = createContext();
+  const LastName = createContext();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <>
+      <FirstName.Provider value={"Neha"}>
+        <LastName.Provider value={"Thakur"}>
+          <FirstCom />
+        </LastName.Provider>
+      </FirstName.Provider>
+    </>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+export { FirstName, LastName };
+
+
+
+
