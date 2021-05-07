@@ -1,0 +1,12 @@
+{
+  "name": "UseContext",
+  "displayName": "UseContext",
+  "expo": {
+    "name": "UseContext",
+    "slug": "UseContext",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
